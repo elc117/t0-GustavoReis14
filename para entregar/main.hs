@@ -11,5 +11,11 @@ isBin' cod =
     in if ver_cod == [] then True else False 
 
 auxBinDec' :: [Int] -> Int
-auxBinDec' bin = sum (map (2^)  (elemIndices 1 (reverse bin)))
+auxBinDec' bin = sum (map (2^)  (elemIndices 1 (reverse bin))) --reverse inverte
+
+isHex :: String -> Bool
+isHex num = 
+    let   true_n = filter (isHexDigit) num
+    in if length num == length true_n  then True else False
+
           
